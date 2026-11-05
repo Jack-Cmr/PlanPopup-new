@@ -13,14 +13,17 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      # 注意：下面这行加上了 cd PlanPopup
       - name: Give gradlew permission
-        run: chmod +x ./gradlew
+        run: cd PlanPopup && chmod +x ./gradlew
 
+      # 注意：这里也加上了 cd PlanPopup
       - name: Build APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: cd PlanPopup && ./gradlew assembleDebug --stacktrace
 
+      # 注意：上传的路径也要加上 PlanPopup/ 前缀
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: PlanPopup/app/build/outputs/apk/debug/app-debug.apk
