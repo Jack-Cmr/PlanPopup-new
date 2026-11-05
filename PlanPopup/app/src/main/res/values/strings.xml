@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">计划弹窗</string>
+
+    <string name="channel_reminders_name">计划提醒</string>
+    <string name="channel_reminders_description">到点弹出高优先级提醒；默认静音、无震动。</string>
+
+    <string name="notification_fallback_text">现在该做这件事了</string>
+    <string name="notification_action_complete">完成</string>
+    <string name="notification_action_snooze">稍后10分钟</string>
+</resources>
